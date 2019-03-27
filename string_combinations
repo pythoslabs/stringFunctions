@@ -1,0 +1,41 @@
+# ------------------------------- Functions ----------------
+# if file 1 contains lines a, b, c and file2 contains lines 1,2,3
+# resultant file will contain different strings in the new file - output_file
+#  a1,a2,a3,b1,b2,b3  
+#  specified by the delimiter ( coming in between )
+#  To do : create the whole file as a function
+# ------------------------------- Functions ----------------
+def Fn_write_to_file(L_URL,file_name):
+    target = open(file_name, 'a')
+
+    for str_elements in L_URL:
+        try:
+            target.write(str(str_elements) + str("\n"))
+        except Exception as e:
+            print("Error 318 : Error writing to  file\n")
+            print(str(e))
+    target.close()
+    print("Writing to file ...........Complete ")
+    return 0
+
+# -------------------------------
+
+file_first = open("text1.txt", "r")
+second_first = open("text2.txt", "r")
+delimiter_string = " "
+combined_list = []
+fName = "output_file.txt:
+
+list_file_first = file_first.read().splitlines()
+list_file_second = second_first.read().splitlines()
+
+for lines1 in list_file_first :
+    for lines2 in list_file_second :
+        merged_line=lines1 + delimiter_string + lines2
+        combined_list.append(merged_line)
+
+Fn_write_to_file(combined_list,fName) #write the list to a final file
+
+
+
+
