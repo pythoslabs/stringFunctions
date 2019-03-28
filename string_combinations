@@ -2,8 +2,12 @@
 # if file 1 contains lines a, b, c and file2 contains lines 1,2,3
 # resultant file will contain different strings in the new file - output_file
 #  a1,a2,a3,b1,b2,b3  
+
+
 #  specified by the delimiter ( coming in between )
 #  To do : create the whole file as a function
+# Usage : Fn_combine_files(file1,delim,file2)
+#
 # ------------------------------- Functions ----------------
 def Fn_write_to_file(L_URL,file_name):
     target = open(file_name, 'a')
