@@ -1,0 +1,4 @@
+#Simple way to display multiple string variables in a print function 
+name="George"
+salutation = "How are you ?"
+print("Hello %s, %s" %(name,salutation))
